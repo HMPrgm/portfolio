@@ -15,6 +15,11 @@ export default function ProjectArchive() {
             name: "Web Dev",
             projects: [
                 {
+                    title: "Fact App",
+                    desc: "A simple Express app that calls an api to get a random fact",
+                    link: "https://github.com/HMPrgm/RandomFactApp",
+                },
+                {
                     title: "HooBets",
                     desc: "An online betting app built for HooHacks 2024 that uses React and Flask",
                     link: "https://github.com/HMPrgm/Hoobets",
@@ -25,16 +30,25 @@ export default function ProjectArchive() {
                     link: "https://github.com/HMPrgm/grocery-store-angular",
                 },
                 {
-                    title: "Fact App",
-                    desc: "A simple Express app that calls an api to get a random fact",
-                    link: "https://github.com/HMPrgm/RandomFactApp",
-                },
-                {
                     title: "Portfolio",
                     desc: "Check out the codebase for this portfolio!",
                     link: "https://github.com/HMPrgm/Portfolio",
                 },
-
+                {
+                    title: "Textbook Lending Service",
+                    desc: "A platform for lending and borrowing textbooks",
+                    link: "https://github.com/HMPrgm/cs3120-project",
+                },
+                {
+                    title: "Lingo",
+                    desc: "A minimalist alternative to language learning platforms like LingQ and Duolingo. Learn languages through reading content you love.",
+                    link: "https://github.com/HMPrgm/lingo",
+                },
+                {
+                    title: "Basil",
+                    desc: "A personal finance tracker to take control of your financial data. Built for those who miss Mint.com.",
+                    link: "https://github.com/HMPrgm/basil",
+                },
             ]
         },
         {
@@ -74,7 +88,12 @@ export default function ProjectArchive() {
                     title: "Note App",
                     desc: "A simple notetaking app built using .NET WPF",
                     link: "https://github.com/HMPrgm/NoteApp"
-                }
+                },
+                {
+                    title: "OctoDB",
+                    desc: "A simple, lightweight graph database for your project. Written in C++.",
+                    link: "https://github.com/HMPrgm/octo-db",
+                },
             ]
         }
     ]
