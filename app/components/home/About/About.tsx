@@ -7,7 +7,7 @@ export default function About() {
   const sections: any = {
     personal: {
       title: "I'm a CS and Math Student at UVA",
-      text: "I'm a third-year student at the University of Virginia, studying Computer Science and Mathematics. I have a passion for software engineering and am always looking to learn new technologies. I love working on projects that challenge me and allow me to grow as a developer. My main interest in math is Graph theory. Outside of CS, I enjoy reading, lifting, cooking (especially Italian food), and learning languages (more below).",
+      text: "I'm a fourth-year student at the University of Virginia, studying Computer Science and Mathematics. I have a passion for software engineering and am always looking to learn new technologies. I love working on projects that challenge me and allow me to grow as a developer. My main interest in math is Graph theory. Outside of CS, I enjoy reading, lifting, cooking (especially Italian food), and learning languages (more below).",
       left: false,
       photo: 'Photo_Cropped.png'
     },
