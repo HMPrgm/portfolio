@@ -13,7 +13,7 @@ export default function About() {
     },
     webdev: {
       title: "Languages & Technologies I've Used",
-      text: "I started programming in 2018 with C# and Unity, and spent around 3 years developing games. In that time, I took courses in Python and Jave. I started web development in 2021 with Basic HTML, CSS, Javascript, then moved to Express and Node.js, and have since learned React, Next.js, Angular and Tailwind. I have since gained experience with many different languages, frameworks, and technologies. Currently I mainly use Typescript, Go, Ruby, and C++. I love learning new technologies and am always looking for new challenges.",
+      text: "I started programming in 2018 with C# and Unity, and spent around 3 years developing games. In that time, I took courses in Python and Jave. I started web development in 2021 with basic HTML, CSS, Javascript, then moved to Express and Node.js, and have since learned React, Next.js, Angular and Tailwind. I have since gained experience with many different languages, frameworks, and technologies. Currently I mainly use Typescript, Go, Ruby, and C++. I love learning new technologies and am always looking for new challenges.",
       left: true,
       techs:
         [
