@@ -13,7 +13,7 @@ export default function ProjectSection({ projectCategory }: { projectCategory: P
             {/* </Reveal>
             <Reveal> */}
             <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
-                {projectCategory.projects.map(p => 
+                {projectCategory.projects.reverse().map(p => 
                 
                     <ProjectPreview project={p}></ProjectPreview>
                 

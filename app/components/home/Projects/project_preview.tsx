@@ -5,7 +5,7 @@ export default function ProjectPreview({ project }: { project: Project }) {
 
 
   return (
-    <div className="grid  p-12 bg-Cdarkmain text-Cwhite container items-center mx-auto lg:w-[50rem] my-10 hover:lg:w-[51rem] hover:py-14 hover:bg-Cmain transition-all duration-500 ease-out group">
+    <div className="grid  p-12 bg-Cdarkmain text-Cwhite container items-center mx-auto lg:w-[50rem] my-10 hover:py-14 hover:bg-Cmain transition-all duration-500 ease-out group">
       <div className="text-center flex flex-col gap-3 items-center justify-center">
         <h3 className="text-3xl  transition-all duration-500 ease-out font-playfairDisplay">{project.title}</h3>
         <p className="pb-2">{project.desc}</p>
