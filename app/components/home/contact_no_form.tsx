@@ -1,3 +1,4 @@
+'use client'
 import { useRef, useState } from "react"
 import Reveal from "../partials/effects/revealonscroll";
 import Link from "next/link";

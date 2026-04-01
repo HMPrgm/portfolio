@@ -23,16 +23,16 @@ export default function Projects() {
       desc: "A minimalist alternative to language learning platforms like LingQ and Duolingo. Learn languages through reading content you love.",
       link: "https://github.com/HMPrgm/lingo",
     },
-    {
-      title: "Basil",
-      desc: "A personal finance tracker to take control of your financial data. Built for those who miss Mint.com.",
-      link: "https://github.com/HMPrgm/basil",
-    },
-    {
-      title: "OctoDB",
-      desc: "A simple, lightweight graph database for your project. Written in C++.",
-      link: "",
-    },
+    // {
+    //   title: "Basil",
+    //   desc: "A personal finance tracker to take control of your financial data. Built for those who miss Mint.com.",
+    //   link: "https://github.com/HMPrgm/basil",
+    // },
+    // {
+    //   title: "OctoDB",
+    //   desc: "A simple, lightweight graph database for your project. Written in C++.",
+    //   link: "",
+    // },
   ]
   return (
     <section id="projects" className='bw-extreme-text text-center py-10 '>

@@ -7,7 +7,7 @@ export default function About() {
   const sections: any = {
     personal: {
       title: "I'm a CS and Math Student at UVA",
-      text: "I'm a fourth-year student at the University of Virginia, studying Computer Science and Mathematics. I have a passion for software engineering and am always looking to learn new technologies. I love working on projects that challenge me and allow me to grow as a developer. My main interest in math is Graph theory. Outside of CS, I enjoy reading, lifting, cooking (especially Italian food), and learning languages (more below).",
+      text: "I'm a fourth-year student at the University of Virginia, studying Computer Science and Mathematics. I have a passion for software engineering and distributed systems, and I am always looking to learn new technologies. I love working on projects that challenge me and allow me to grow as a developer. I plan to pursue a Master's in Computer Science, specializing in Distributed Systems at KU Leuven starting in 2026. Outside of CS, I enjoy reading, lifting, cooking (especially Italian food), and learning languages (more below).",
       left: false,
       photo: 'Photo_Cropped.png'
     },
@@ -137,7 +137,7 @@ export default function About() {
     },
     activities: {
       title: "I Love learning Languages",
-      text: "My goal is to learn Spanish, German, and Italian by the time I'm 25. Not necessarily fluently, but enough to have a casual conversation with a native speaker.",
+      text: "Originally I started learning as part of my family is from Argentina. After that I began learning German for fun, and now since I am pursuing a degree at KU Leuven I am learning Dutch.",
       left: false,
       techs:
         [
@@ -150,8 +150,8 @@ export default function About() {
             photo: './technology_photos/Germany.png'
           },
           {
-            name: 'Italian',
-            photo: './technology_photos/Italian.png'
+            name: 'Dutch',
+            photo: './technology_photos/Flanders.png'
           },
         ]
     },
