@@ -6,14 +6,14 @@ export default function About() {
 
   const sections: any = {
     personal: {
-      title: "I'm a CS and Math Student at UVA",
-      text: "I'm a fourth-year student at the University of Virginia, studying Computer Science and Mathematics. I have a passion for software engineering and distributed systems, and I am always looking to learn new technologies. I love working on projects that challenge me and allow me to grow as a developer. I plan to pursue a Master's in Computer Science, specializing in Distributed Systems at KU Leuven starting in 2026. Outside of CS, I enjoy reading, lifting, cooking (especially Italian food), and learning languages (more below).",
+      title: "I'm a CS Master's Student at KU Leuven",
+      text: "I'm a first-year master student at KU Leuven, studying Computer Science with a specialization in Distributed Systems. I have a passion for software engineering and distributed systems, and I am always looking to learn new technologies. I love working on projects that challenge me and allow me to grow as a developer. I plan to become a cloud software engineer after graduation in 2028. Outside of CS, I enjoy reading, lifting, cooking (especially Italian food), and learning languages (more below).",
       left: false,
       photo: 'Photo_Cropped.png'
     },
     webdev: {
       title: "Languages & Technologies I've Used",
-      text: "I started programming in 2018 with C# and Unity, and spent around 3 years developing games. In that time, I took courses in Python and Jave. I started web development in 2021 with basic HTML, CSS, Javascript, then moved to Express and Node.js, and have since learned React, Next.js, Angular and Tailwind. I have since gained experience with many different languages, frameworks, and technologies. Currently I mainly use Typescript, Go, Ruby, and C++. I love learning new technologies and am always looking for new challenges.",
+      text: "I started programming in 2018 with C# and Unity, and spent around 3 years developing games. In that time, I took courses in Python and Jave. I started web development in 2021 with basic HTML, CSS, Javascript, then moved to Express and Node.js, and have since learned React, Next.js, Angular and Tailwind. I have since gained experience with many different languages, frameworks, and technologies. Currently I mainly use Typescript, Go, Python, and C++. I love learning new technologies and am always looking for new challenges.",
       left: true,
       techs:
         [
@@ -103,42 +103,10 @@ export default function About() {
           },
         ]
     },
-    design: {
-      title: "I'm an Audio and Video Editor",
-      text: "I'm an editor for two podcasts: <a href='https://open.spotify.com/show/0OtkSXW04TEbGX3lwUEQcH?si=d884835e44414dd6' target='_blank'>The Hidden Curriculum</a> and <a href='https://open.spotify.com/show/4ZiJcyjqtUC9G09zIqdcVY?si=6346d934a38d4073 target='_blank'>Coup de'Pod</a>. I've been using professional video editing software since 2020. I'm at an intermediate level with Premiere Pro and Davinci Resolve and am a beginner in After Effects. I have skills with design software, being at an intermediate level with Photoshop and Illustrator and a beginner with Figma.",
-      left: true,
-      techs:
-        [
-          {
-            name: 'Davinci Resolve',
-            photo: './technology_photos/Davinciresolve.png'
-          },
-          {
-            name: 'Premire Pro',
-            photo: './technology_photos/Premirepro.png'
-          },
-          {
-            name: 'After Effects',
-            photo: './technology_photos/Aftereffects.png'
-          },
-          {
-            name: 'Photoshop',
-            photo: './technology_photos/Photoshop.png'
-          },
-          {
-            name: 'Illustrator',
-            photo: './technology_photos/Illustrator.png'
-          },
-          {
-            name: 'Figma',
-            photo: './technology_photos/Figma.png'
-          },
-        ]
-    },
     activities: {
       title: "I Love learning Languages",
       text: "Originally I started learning as part of my family is from Argentina. After that I began learning German for fun, and now since I am pursuing a degree at KU Leuven I am learning Dutch.",
-      left: false,
+      left: true,
       techs:
         [
           {
@@ -190,7 +158,7 @@ export default function About() {
 
         <TechStacks techs={sections.other.techs}></TechStacks>
       </AboutSection>
-      {/* Design Section */}
+      {/* Design Section
       <AboutSection
         key={sections.design.title}
         title={sections.design.title}
@@ -198,7 +166,7 @@ export default function About() {
         left={sections.design.left}>
 
         <TechStacks techs={sections.design.techs}></TechStacks>
-      </AboutSection>
+      </AboutSection> */}
       {/* Activities Section */}
       <AboutSection
         key={sections.activities.title}
