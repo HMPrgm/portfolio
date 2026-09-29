@@ -19,8 +19,8 @@ export default function Projects() {
 
   const currentProjects: Project[] = [
     {
-      title: "Lingo",
-      desc: "A minimalist alternative to language learning platforms like LingQ and Duolingo. Learn languages through reading content you love.",
+      title: "Sapling Dutch",
+      desc: "A Dutch language learning app that uses spaced repetition to help users learn vocabulary and grammar.",
       link: "https://github.com/HMPrgm/lingo",
     },
     // {
