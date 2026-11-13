@@ -30,7 +30,7 @@ export default function Footer() {
             <div><a href="https://www.linkedin.com/in/henry-morris-b87361274/" target="_blank" className="hover:text-Cmain transition-all duration-300">Linkedin</a></div>
             <div><a href="mailto:henrymprof@gmail.com" target="_blank" className="hover:text-Cmain transition-all duration-300">Email</a></div>
           </div>
-          <div className="text-xs">Henry Morris ©2024</div>
+          <div className="text-xs">Henry Morris ©2026</div>
         </div>
       </div>
     </footer>
