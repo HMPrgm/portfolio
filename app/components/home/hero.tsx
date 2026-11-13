@@ -1,7 +1,10 @@
 'use client'
 import Dots from '../partials/dots/dots';
+import type { Locale } from "../../i18n";
+import { translations } from "../../i18n";
 
-export default function Hero() {
+export default function Hero({ locale }: { locale: Locale }) {
+  const text = translations[locale];
 
   const nums: number[] = []
   for (let i: number = 0; i < 200; i++) {
@@ -12,9 +15,9 @@ export default function Hero() {
     <section id="home" className="items-center text-center bw-text font-playfairDisplay flex flex-col gap-12 pt-32 pb-10 sm:pb-0 sm:pt-0 sm:min-h-screen justify-center relative -z-20 overflow-x-clip">
       <Dots></Dots>
       <h2 className="text-5xl sm:text-8xl font-bold">
-        Hi, I'm Henry
+        {text.greeting}
       </h2>
-      <h3 className="text-2xl sm:text-4xl min-h-10 max-w-[40vw]">A CS and Math student and future cloud engineer.</h3>
+      <h3 className="text-2xl sm:text-4xl min-h-10 max-w-[40vw]">{text.introduction}</h3>
       <div></div>
     </section>
   )

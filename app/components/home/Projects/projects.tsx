@@ -3,16 +3,19 @@ import ProjectPreview from './project_preview'
 import Reveal from '../../partials/effects/revealonscroll'
 import Link from 'next/link';
 import {Project} from './project'
+import type { Locale } from "../../../i18n";
+import { translations } from "../../../i18n";
 
 
 
-export default function Projects() {
+export default function Projects({ locale }: { locale: Locale }) {
+  const text = translations[locale];
 
-  const linkToProjectPage: string = '/projects'
+  const linkToProjectPage: string = locale === "nl" ? "/nl/projects" : "/projects";
   const finishedProjects: Project[] = [
     {
       title: "Textbook Lending Service",
-      desc: "A platform for lending and borrowing textbooks",
+      desc: text.textbookDescription,
       link: "https://github.com/HMPrgm/cs3120-project",
     },
   ]
@@ -20,7 +23,9 @@ export default function Projects() {
   const currentProjects: Project[] = [
     {
       title: "Sapling Dutch",
-      desc: "A Dutch language learning app that uses spaced repetition to help users learn vocabulary and grammar.",
+      desc: locale === "nl"
+        ? "Een app om Nederlands te leren met gespreide herhaling voor woordenschat en grammatica."
+        : "A Dutch language learning app that uses spaced repetition to help users learn vocabulary and grammar.",
       link: "https://github.com/HMPrgm/lingo",
     },
     // {
@@ -37,24 +42,24 @@ export default function Projects() {
   return (
     <section id="projects" className='bw-extreme-text text-center py-10 '>
       <Reveal>
-        <h2 className='project-title text-3xl sm:text-5xl'>Recent Projects</h2>
+        <h2 className='project-title text-3xl sm:text-5xl'>{text.recentProjects}</h2>
       </Reveal>
       {finishedProjects.map(proj =>
         <Reveal>
-          <ProjectPreview key={proj.title} project={proj}></ProjectPreview>
+          <ProjectPreview key={proj.title} project={proj} locale={locale}></ProjectPreview>
         </Reveal>
       )}
       <Reveal>
-        <h2 className='project-title text-3xl sm:text-5xl'>In Progress</h2>
+        <h2 className='project-title text-3xl sm:text-5xl'>{text.inProgress}</h2>
       </Reveal>
       {currentProjects.map(proj =>
         <Reveal>
-          <ProjectPreview key={proj.title} project={proj}></ProjectPreview>
+          <ProjectPreview key={proj.title} project={proj} locale={locale}></ProjectPreview>
         </Reveal>
       )}
       <Reveal>
         <Link href={linkToProjectPage} className='text-lg hover:text-Cmain transition-all duration-500  hover:text-[1.2rem]'>
-          <p>All Projects </p>
+          <p>{text.allProjects}</p>
         </Link>
       </Reveal>
     </section>

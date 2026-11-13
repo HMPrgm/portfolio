@@ -1,7 +1,10 @@
 import Link from "next/link"
 import { Project } from "./project"
+import type { Locale } from "../../../i18n";
+import { translations } from "../../../i18n";
 
-export default function ProjectPreview({ project }: { project: Project }) {
+export default function ProjectPreview({ project, locale = "en" }: { project: Project; locale?: Locale }) {
+  const text = translations[locale];
 
 
   return (
@@ -13,9 +16,9 @@ export default function ProjectPreview({ project }: { project: Project }) {
           {
             project.link == ''
             ? 
-            <div className="text-center  transition-all duration-500 ease-out py-3 px-6 max-w-40 border-solid border-2 border-Clightmain text-Clightmain  ">Coming Soon</div> 
+            <div className="text-center  transition-all duration-500 ease-out py-3 px-6 max-w-40 border-solid border-2 border-Clightmain text-Clightmain  ">{text.comingSoon}</div>
             :
-            <Link href={project.link} target="_blank" className="text-center hover:bg-Cwhite hover:text-Cblack transition-all duration-500 ease-out py-3 px-6 max-w-40 border-solid border-2 border-Cwhite  ">More Details</Link>
+            <Link href={project.link} target="_blank" className="text-center hover:bg-Cwhite hover:text-Cblack transition-all duration-500 ease-out py-3 px-6 max-w-40 border-solid border-2 border-Cwhite  ">{text.moreDetails}</Link>
           }
         </button>
       </div>

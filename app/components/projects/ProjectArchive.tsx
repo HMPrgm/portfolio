@@ -2,96 +2,99 @@ import { Project } from "../home/Projects/project";
 import Reveal from "../partials/effects/revealonscroll";
 import ProjectPreview from "./ProjectPreview";
 import ProjectSection from "./ProjectSection";
+import type { Locale } from "../../i18n";
+import { translations } from "../../i18n";
 
 export interface ProjectCategory {
     name: string;
     projects: Project[];
 }
 
-export default function ProjectArchive() {
+export default function ProjectArchive({ locale }: { locale: Locale }) {
+    const text = translations[locale];
 
     const projects: ProjectCategory[] = [
         {
-            name: "Web Dev",
+            name: text.webDevelopment,
             projects: [
                 {
                     title: "Fact App",
-                    desc: "A simple Express app that calls an api to get a random fact",
+                    desc: text.factAppDescription,
                     link: "https://github.com/HMPrgm/RandomFactApp",
                 },
                 {
                     title: "HooBets",
-                    desc: "An online betting app built for HooHacks 2024 that uses React and Flask",
+                    desc: text.hoobetsDescription,
                     link: "https://github.com/HMPrgm/Hoobets",
                 },
                 {
                     title: "Groceries Online",
-                    desc: "An online store that simulaties a grocery store using the MEAN stack",
+                    desc: text.groceriesDescription,
                     link: "https://github.com/HMPrgm/grocery-store-angular",
                 },
                 {
                     title: "Portfolio",
-                    desc: "Check out the codebase for this portfolio!",
+                    desc: text.portfolioDescription,
                     link: "https://github.com/HMPrgm/Portfolio",
                 },
                 {
                     title: "Textbook Lending Service",
-                    desc: "A platform for lending and borrowing textbooks",
+                    desc: text.textbookDescription,
                     link: "https://github.com/HMPrgm/cs3120-project",
                 },
                 {
                     title: "Lingo",
-                    desc: "A minimalist alternative to language learning platforms like LingQ and Duolingo. Learn languages through reading content you love.",
+                    desc: text.lingoDescription,
                     link: "https://github.com/HMPrgm/lingo",
                 },
                 {
                     title: "Basil",
-                    desc: "A personal finance tracker to take control of your financial data. Built for those who miss Mint.com.",
+                    desc: text.basilDescription,
                     link: "https://github.com/HMPrgm/basil",
                 },
             ]
         },
         {
-            name: "AI/ML",
+            name: text.artificialIntelligence,
             projects: [
                 {
                     title: "AI Loan Officer",
-                    desc: "Simply upload a bank statement, and get loan predictions.",
+                    desc: text.loanDescription,
                     link: "https://github.com/HMPrgm/ai-lender",
                 }
             ]
         },
         {
-            name: "Games",
+            name: text.games,
             projects: [
                 {
                     title: "Don't Pick a Side",
-                    desc: "a fast-paced game made for GeoJam 2022",
+                    desc: text.dontPickDescription,
                     link: "https://hmprgm.itch.io/dont-pick-a-side"
                 },
                 {
                     title: "Cold War Diplomacy in Europe",
-                    desc: "A cold war strategy map game made for the Historically Accurate Game Jam",
+                    desc: text.coldWarDescription,
                     link: "https://hmprgm.itch.io/cold-war-diplomacy-in-europe"
                 },
                 {
                     title: "Tropical Getaway",
-                    desc: "A tropical themed platformer made for Mini Jam 93",
+                    desc: text.tropicalDescription,
                     link: "https://hmprgm.itch.io/tropical-getaway"
                 },
             ]
         },
         {
-            name: "Other",
+            name: text.other,
             projects: [
                 {
                     title: "Note App",
-                    desc: "A simple notetaking app built using .NET WPF",
+                    desc: text.noteDescription,
                     link: "https://github.com/HMPrgm/NoteApp"
                 },
                 {
                     title: "OctoDB",
-                    desc: "A simple, lightweight graph database for your project. Written in C++.",
+                    desc: text.octoDescription,
                     link: "https://github.com/HMPrgm/octo-db",
                 },
             ]
@@ -101,9 +104,9 @@ export default function ProjectArchive() {
     return (
         <div>
 
-            <p className="bg-Cwhite pt-6 text-center text-md sm:text-lg px-10">All my significant projects are listed here. The recommended ones are on the home page</p>
+            <p className="bg-Cwhite pt-6 text-center text-md sm:text-lg px-10">{text.archiveIntroduction}</p>
 
-            {projects.map(p => <ProjectSection projectCategory={p}></ProjectSection>)}
+            {projects.map(p => <ProjectSection key={p.name} projectCategory={p} locale={locale}></ProjectSection>)}
         </div>
     )
 }

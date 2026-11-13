@@ -1,12 +1,5 @@
-import React from 'react'
-import Hero from '../components/projects/Hero'
-import ProjectArchive from '../components/projects/ProjectArchive'
+import ProjectsPage from "../components/projects/projects_page";
 
 export default function Page() {
-  return (
-    <main>
-        <Hero></Hero>
-        <ProjectArchive></ProjectArchive>
-    </main>
-  )
+  return <ProjectsPage locale="en" />;
 }

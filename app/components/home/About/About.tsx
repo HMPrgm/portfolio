@@ -2,18 +2,22 @@ import Reveal from "../../partials/effects/revealonscroll";
 import AboutSection from "./About_section";
 import TechStacks from "./techStacks";
 import { TechStackInterface } from "./techStacksInter";
-export default function About() {
+import type { Locale } from "../../../i18n";
+import { translations } from "../../../i18n";
+
+export default function About({ locale }: { locale: Locale }) {
+  const text = translations[locale];
 
   const sections: any = {
     personal: {
-      title: "I'm a CS Master's Student at KU Leuven",
-      text: "I'm a first-year master student at KU Leuven, studying Computer Science with a specialization in Distributed Systems. I have a passion for software engineering and distributed systems, and I am always looking to learn new technologies. I love working on projects that challenge me and allow me to grow as a developer. I plan to become a cloud software engineer after graduation in 2028. Outside of CS, I enjoy reading, lifting, cooking (especially Italian food), and learning languages (more below).",
+      title: text.aboutPersonalTitle,
+      text: text.aboutPersonalText,
       left: false,
       photo: 'Photo_Cropped.png'
     },
     webdev: {
-      title: "Languages & Technologies I've Used",
-      text: "I started programming in 2018 with C# and Unity, and spent around 3 years developing games. In that time, I took courses in Python and Jave. I started web development in 2021 with basic HTML, CSS, Javascript, then moved to Express and Node.js, and have since learned React, Next.js, Angular and Tailwind. I have since gained experience with many different languages, frameworks, and technologies. Currently I mainly use Typescript, Go, Python, and C++. I love learning new technologies and am always looking for new challenges.",
+      title: text.aboutLanguagesTitle,
+      text: text.aboutLanguagesText,
       left: true,
       techs:
         [
@@ -64,8 +68,8 @@ export default function About() {
         ]
     },
     other: {
-      title: "Databases, Cloud, and Other Technologies",
-      text: "I have experience with many different databases, including MongoDB, PostgreSQL, and SQLite. I have also worked with cloud technologies such as AWS and Google Cloud. I have experience with Docker and Kubernetes, and have used containers to deploy applications in the cloud. I have also worked with Git and GitHub for version control and collaboration.",
+      title: text.aboutOtherTitle,
+      text: text.aboutOtherText,
       left: false,
       techs:
         [
@@ -104,8 +108,8 @@ export default function About() {
         ]
     },
     activities: {
-      title: "I Love learning Languages",
-      text: "Originally I started learning as part of my family is from Argentina. After that I began learning German for fun, and now since I am pursuing a degree at KU Leuven I am learning Dutch.",
+      title: text.aboutActivitiesTitle,
+      text: text.aboutActivitiesText,
       left: true,
       techs:
         [
@@ -119,7 +123,7 @@ export default function About() {
           },
           {
             name: 'Dutch',
-            photo: './technology_photos/Flanders.png'
+            photo: './technology_photos/netherlands.jpg'
           },
         ]
     },
@@ -129,7 +133,7 @@ export default function About() {
     <section id="about" className="bw-text flex flex-col justify-center text-center py-10">
 
       <Reveal>
-        <h2 className="font-playfairDisplay text-5xl pb-10">Who Am I?</h2>
+        <h2 className="font-playfairDisplay text-5xl pb-10">{text.whoAmI}</h2>
       </Reveal>
       {/* Personal About Section */}
       <AboutSection

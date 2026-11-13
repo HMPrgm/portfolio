@@ -2,7 +2,8 @@ import React from 'react'
 import { ProjectCategory } from './ProjectArchive'
 import ProjectPreview from './ProjectPreview'
 import Reveal from '../partials/effects/revealonscroll'
-export default function ProjectSection({ projectCategory }: { projectCategory: ProjectCategory }) {
+import type { Locale } from "../../i18n";
+export default function ProjectSection({ projectCategory, locale }: { projectCategory: ProjectCategory; locale: Locale }) {
 
 
 
@@ -15,7 +16,7 @@ export default function ProjectSection({ projectCategory }: { projectCategory: P
             <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
                 {projectCategory.projects.reverse().map(p => 
                 
-                    <ProjectPreview project={p}></ProjectPreview>
+                    <ProjectPreview project={p} locale={locale}></ProjectPreview>
                 
                 )}
             </div>

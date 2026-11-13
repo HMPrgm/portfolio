@@ -1,9 +1,28 @@
-export default function footer() {
+'use client';
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import type { Locale } from "../../i18n";
+import { translations } from "../../i18n";
+
+export default function Footer() {
+  const pathname = usePathname();
+  const locale: Locale = pathname === "/nl" || pathname.startsWith("/nl/")
+    ? "nl"
+    : "en";
+  const text = translations[locale];
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   return (
     <footer className="bw-text py-10">
       <div className="grid sm:grid-cols-2 text-center gap-4">
         <div className="container mx-auto items-center md:w-96 px-4 lg:px-0">
-          Designed in <b>Figma</b>, Built with <b>Next.js</b> and <b>Tailwind CSS</b>, and deployed using <b>Vercel</b>.
+          {text.designedWith} <b>Figma</b>, {text.builtWith} <b>Next.js</b>
+          {locale === "nl" ? " en " : " and "}
+          <b>Tailwind CSS</b>, {locale === "nl" ? "" : "and "}
+          {text.andDeployed} <b>Vercel</b>.
         </div>
         <div className="flex flex-col">
           <div className="flex justify-center gap-4">
