@@ -61,7 +61,7 @@ export const translations = {
     about: "Over mij",
     contact: "Contact",
     language: "English",
-    greeting: "Dag, ik ben Henry",
+    greeting: "Hoi, ik ben Henry",
     introduction: "Student computerwetenschappen, en toekomstig cloudengineer.",
     recentProjects: "Recente projecten",
     inProgress: "In ontwikkeling",
