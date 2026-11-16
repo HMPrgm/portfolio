@@ -26,7 +26,7 @@ export default function LanguageSwitcher({ locale }: { locale: Locale }) {
         <span>{locale.toUpperCase()}</span>
         <span aria-hidden="true" className="text-xs">▾</span>
       </summary>
-      <div className="absolute right-6 top-full z-30 mt-2 min-w-max rounded-lg bg-white py-1 text-left shadow-lg dark:bg-[#131920]">
+      <div className="absolute sm:right-6 right-0 top-full z-30 mt-2 min-w-max rounded-lg bg-white py-1 text-left shadow-lg dark:bg-[#131920]">
         {languages.map((language) => (
           <Link
             key={language.locale}
